@@ -1,6 +1,12 @@
-import React from 'react';
-
+import React, { useCallback, useState } from 'react';
+import { Button, Checkbox } from '../Prime/index';
+import Explore from '../Components/Explore';
 export default function Home() {
+  const [checked, setChecked] = useState(false);
+  const receivePayment = useCallback((paymentId) => {
+    console.log(paymentId);
+  });
+
   return (
     <section>
       <div className='container'>
@@ -17,6 +23,23 @@ export default function Home() {
         </article>
         <article>
           <h1 className='text-2xl mb-4'>Install the below dependency.</h1>
+          <Button label='Hello React' />
+          <div className='card flex justify-content-center'>
+            <Checkbox
+              inputId='ingredient1'
+              onChange={(e) => setChecked(e.checked)}
+              checked={checked}
+            ></Checkbox>
+            <label htmlFor='ingredient1' className='ml-2'>
+              Cheese
+            </label>
+          </div>
+        </article>
+        <article>
+          <h1 className='text-2xl mb-4'>
+            Run the below command in your terminal to start the application.
+          </h1>
+          <Explore receivePayment={receivePayment} />
         </article>
       </div>
     </section>
