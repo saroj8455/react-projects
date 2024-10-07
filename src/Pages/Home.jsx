@@ -3,8 +3,13 @@ import { Button, Checkbox } from '../Prime/index';
 import Explore from '../Components/Explore';
 export default function Home() {
   const [checked, setChecked] = useState(false);
+  const [paymentId, setPaymentId] = useState('');
+  const [paymentStatus, setPaymentStatus] = useState(false);
+
   const receivePayment = useCallback((paymentId) => {
     console.log(paymentId);
+    setPaymentId(paymentId);
+    setPaymentStatus(true);
   });
 
   return (
@@ -39,6 +44,13 @@ export default function Home() {
           <h1 className='text-2xl mb-4'>
             Run the below command in your terminal to start the application.
           </h1>
+          <p
+            className={`text-900 p-2 ${
+              paymentStatus ? 'bg-orange-400' : 'bg-green-700'
+            } `}
+          >
+            {paymentId}
+          </p>
           <Explore receivePayment={receivePayment} />
         </article>
       </div>

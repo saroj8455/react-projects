@@ -1,42 +1,20 @@
 import React from 'react';
+import Navitem from './NavItem';
 
 export default function Header() {
+  const navLinks = [
+    { name: 'Home', link: '/' },
+    { name: 'React Page', link: '/react-page' },
+    { name: 'About Us', link: '/about' },
+    { name: 'Contact', link: '/contact' },
+    { name: 'Products', link: '/products' },
+  ];
+
   return (
     <header>
       <nav>
         <ul className='flex gap-4 align-items-center justify-content-center'>
-          <li>
-            <a
-              href='#'
-              className='font-medium text-700 hover:text-orange-700 focus:text-blue-500 active:text-blue-500'
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href='#'
-              className='font-medium text-700 hover:text-orange-700 focus:text-blue-500 active:text-blue-500'
-            >
-              About Us
-            </a>
-          </li>
-          <li>
-            <a
-              href='#'
-              className='font-medium text-700 hover:text-orange-700 focus:text-blue-500 active:text-blue-500'
-            >
-              Contact
-            </a>
-          </li>
-          <li>
-            <a
-              href='#'
-              className='font-medium text-700 hover:text-orange-700 focus:text-blue-500 active:text-blue-500'
-            >
-              Products
-            </a>
-          </li>
+          <Navitem navLinks={navLinks} />
         </ul>
       </nav>
     </header>

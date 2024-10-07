@@ -8,6 +8,7 @@ export default function Explore({ receivePayment }) {
     const paymentId = uuidv6();
     console.log(paymentId);
     receivePayment(paymentId);
+    // return receivePayment(paymentId);
     // return paymentId;
   };
 

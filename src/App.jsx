@@ -8,8 +8,11 @@ import Welcome from './components/Welcome';
 import Mainlayout from './Layout/Mainlayout';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './pages/ErrorPage';
-import Home from './pages/Home';
+// import Home from './pages/Home';
 import About from './pages/About';
+import ReactPage from './Pages/ReactPage';
+import Home from './Pages/Home';
+import ProductPagination from './Pages/ProductPagination';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +23,14 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+      },
+      {
+        path: 'react-page',
+        element: <ReactPage />,
+      },
+      {
+        path: 'products',
+        element: <ProductPagination />,
       },
       {
         path: 'about',

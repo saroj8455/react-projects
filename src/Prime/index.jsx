@@ -1,4 +1,5 @@
 import { Button } from 'primereact/button';
 import { Chips } from 'primereact/chips';
 import { Checkbox } from 'primereact/checkbox';
-export { Button, Chips, Checkbox };
+import { Card } from 'primereact/card';
+export { Button, Chips, Checkbox, Card };

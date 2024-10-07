@@ -7,10 +7,13 @@ import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 
 import './index.css';
+const value = {
+  ripple: true,
+};
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <PrimeReactProvider>
+    <PrimeReactProvider value={value}>
       <App />
     </PrimeReactProvider>
   </StrictMode>
