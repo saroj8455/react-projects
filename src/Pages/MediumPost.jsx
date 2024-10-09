@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from 'primereact/card';
 import { Chip } from 'primereact/chip';
+import Page from './Page';
+import Expensive from '../Components/Expensive';
 
 export default function MediumPost() {
   const [post, setPost] = useState({});
@@ -22,7 +24,6 @@ export default function MediumPost() {
           throw new Error(data.message);
         }
         setPost(data);
-        console.log(data);
       } catch (error) {
         setError(true);
       } finally {
@@ -45,6 +46,7 @@ export default function MediumPost() {
     <section>
       <div className='container'>
         <div className='card'>
+          {/* handel undefined state */}
           {post && (
             <Card title={post.title}>
               <div className='mb-3 flex gap-2'>
@@ -58,6 +60,12 @@ export default function MediumPost() {
           )}
         </div>
       </div>
+      <article>
+        <Page>
+          {/* <h3>Children component</h3>
+          <Expensive /> */}
+        </Page>
+      </article>
     </section>
   );
 }
