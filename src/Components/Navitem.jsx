@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Navitem({ navLinks }) {
-  console.log(navLinks);
-
   return (
     <>
       {navLinks.map((item, index) => (

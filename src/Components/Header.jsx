@@ -8,6 +8,7 @@ export default function Header() {
     { name: 'About Us', link: '/about' },
     { name: 'Contact', link: '/contact' },
     { name: 'Products', link: '/products' },
+    { name: 'Medium Post', link: '/post' },
   ];
 
   return (

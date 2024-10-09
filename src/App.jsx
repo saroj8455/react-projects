@@ -13,6 +13,7 @@ import About from './pages/About';
 import ReactPage from './Pages/ReactPage';
 import Home from './Pages/Home';
 import ProductPagination from './Pages/ProductPagination';
+import MediumPost from './Pages/MediumPost';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: 'products',
         element: <ProductPagination />,
+      },
+      {
+        path: 'post',
+        element: <MediumPost />,
       },
       {
         path: 'about',
