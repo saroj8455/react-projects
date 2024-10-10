@@ -10,13 +10,13 @@ export default function Profile({
   const usersAPI = 'https://fakestoreapi.com/users';
 
   useEffect(() => {
-    console.log('useEffect called');
+    // console.log('useEffect called');
     const abortCtrl = new AbortController();
     const createFakeUsers = async () => {
       const response = await fetch(usersAPI, { signal: abortCtrl.signal });
       const data = await response.json();
 
-      console.log(data);
+      // console.log(data);
     };
 
     if (effectRan.current) {
@@ -24,7 +24,7 @@ export default function Profile({
     }
 
     return () => {
-      console.log('unmounted');
+      // console.log('unmounted');
       // clean up code goes here
       // abortCtrl.abort();
       effectRan.current = true;

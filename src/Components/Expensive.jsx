@@ -16,9 +16,18 @@ function Expensive({ complex }) {
   //   // do the expensive calc
   // }
 
+  const testEmpty = (params) => {
+    if (params) {
+      console.log('Hi');
+    } else {
+      console.log('By');
+    }
+  };
+
   useEffect(() => {
     console.log(Math.random());
     complex(); // Run the complex calculation when the component mounts
+    testEmpty(true);
   }, [complex]);
 
   return (
