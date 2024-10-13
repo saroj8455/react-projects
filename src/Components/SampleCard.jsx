@@ -22,7 +22,7 @@ export default function SampleCard() {
   );
 
   return (
-    <div className='card'>
+    <div className='card flex align-items-center justify-content-center'>
       <Card
         title='Advanced Card'
         subTitle='Card subtitle'
