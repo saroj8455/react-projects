@@ -31,6 +31,7 @@ export default function Register() {
 
   useEffect(() => {
     // console.log(data);
+    setCountries(data);
   }, []);
 
   const {
@@ -211,6 +212,24 @@ export default function Register() {
                   )}
                 />
                 <label htmlFor='date'>Birthday</label>
+              </span>
+            </div>
+            <div className='field mb-5'>
+              <span className='p-float-label'>
+                <Controller
+                  name='country'
+                  control={control}
+                  render={({ field }) => (
+                    <Dropdown
+                      id={field.name}
+                      value={field.value}
+                      onChange={(e) => field.onChange(e.value)}
+                      options={countries}
+                      optionLabel='name'
+                    />
+                  )}
+                />
+                <label htmlFor='country'>Country</label>
               </span>
             </div>
             <div className='field-checkbox'>
