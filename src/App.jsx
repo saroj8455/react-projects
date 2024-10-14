@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import 'primereact/resources/themes/lara-light-indigo/theme.css'; //theme
 import 'primereact/resources/primereact.min.css'; //core css
-import 'primereact/resources/primereact.css';
+// import 'primereact/resources/primereact.css';
 import 'primeicons/primeicons.css'; //icons
 import 'primeflex/primeflex.css'; // flex
 import Welcome from './components/Welcome';
@@ -16,6 +16,7 @@ import Home from './Pages/Home';
 import ProductPagination from './Pages/ProductPagination';
 import MediumPost from './Pages/MediumPost';
 import Contact from './Pages/Contact';
+import Customer from './Components/Customer';
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: 'contact',
         element: <Contact />,
+      },
+      {
+        path: 'customer',
+        element: <Customer />,
       },
       {
         path: '*',
