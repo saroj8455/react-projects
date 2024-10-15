@@ -19,7 +19,7 @@ export default function CustomerPage() {
       console.log(1);
       throw new Error('Something went wrong!');
     }
-  }, [customer, isInitialized]); // Run this effect after `customer` is updated
+  }, [customer, isInitialized]); // Run this effect after `customer` is updated and initialized
 
   return (
     <article>
